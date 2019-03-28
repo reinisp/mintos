@@ -36,8 +36,7 @@
   export default {
     methods: {
       removeCurrency: function (currency) {
-        const value = this.selectedCurrencies;
-        const currencyIndex = value.findIndex(({ title }) => title === currency.title);
+        const currencyIndex = this.selectedCurrencies.findIndex(({ title }) => title === currency.title);
         this.selectedCurrencies.splice(currencyIndex, 1);
       },
     },
